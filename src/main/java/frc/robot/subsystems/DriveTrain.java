@@ -7,9 +7,13 @@
 
 package frc.robot.subsystems;
 
+import com.revrobotics.CANSparkMax;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class DriveTrain extends SubsystemBase {
+  CANSparkMax leftMaster, leftSlave, rightMaster, rightSlave;
+
   /**
    * Creates a new DriveTrain.
    */
