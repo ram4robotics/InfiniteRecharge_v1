@@ -7,6 +7,8 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.InvertType;
+
 import edu.wpi.first.wpilibj.kinematics.DifferentialDriveKinematics;
 
 /**
@@ -80,6 +82,20 @@ public final class Constants {
         // Reasonable baseline values for a RAMSETE follower in units of meters and seconds
         public static final double kRamseteB = 2;
         public static final double kRamseteZeta = 0.7;
+    }
+
+    public static final class IntakeConstants {
+        public static final int kIntakeMotor_id = 21;
+        public static final InvertType kMotorInverted = InvertType.None;
+        public static final int[] kEncoderPorts = new int[]{4, 5};
+        public static final boolean kEncoderReversed = true;
+        public static final double kEncoderPulsesPerRev = 8192; // Rev Throughbore encoder
+
+        public static final int[] kDSolenoidPorts = new int[]{0,1};
+
+        public static final double kIntakeGearRatio = 4.0; // Assuming a 57Sport 4:1 gearbox
+        public static final double kPullInPower = 0.6;  // Power to be applied for pulling in the PowerCell
+        public static final double kPushOutPower = -0.5;  // Power to be applied for pushing out the PowerCell
     }
 
 }

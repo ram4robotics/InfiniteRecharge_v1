@@ -69,13 +69,12 @@ public class SparkMAX_DriveTrain extends SubsystemBase {
 
     // The left-side drive encoder
     m_leftEncoder = new Encoder(DriveConstants.kLeftEncoderPorts[0], DriveConstants.kLeftEncoderPorts[1],
-    DriveConstants.kLeftEncoderReversed);
+                DriveConstants.kLeftEncoderReversed);
     m_leftEncoder.setDistancePerPulse(DriveConstants.kLeftMetersPerPulse);
 
     // The right-side drive encoder
     m_rightEncoder = new Encoder(DriveConstants.kRightEncoderPorts[0], DriveConstants.kRightEncoderPorts[1],
                   DriveConstants.kRightEncoderReversed);
-    // m_rightEncoder = new Encoder(2, 3);
     m_rightEncoder.setDistancePerPulse(DriveConstants.kRightMetersPerPulse);
 
     resetEncoders();
