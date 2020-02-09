@@ -8,13 +8,17 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.SparkMAX_DriveTrain;
 
 public class AutoDriveToTrench extends CommandBase {
+  private final SparkMAX_DriveTrain m_drvTrain;
   /**
    * Creates a new AutoDriveToTrench.
    */
-  public AutoDriveToTrench() {
+  public AutoDriveToTrench(SparkMAX_DriveTrain drvTrain) {
     // Use addRequirements() here to declare subsystem dependencies.
+    m_drvTrain = drvTrain;
+    addRequirements(drvTrain);
   }
 
   // Called when the command is initially scheduled.
