@@ -51,7 +51,7 @@ public class Intake extends SubsystemBase {
     m_Encoder.reset();
   }
 
-  public void pullPowerCells() {
+  public void pullInPowerCells() {
     // ToDo:  Need to add Velocity closed loop controller based on 
     // either the frc-characterization output or CANifier-connected throughbore encoder.
     m_motor.set(ControlMode.PercentOutput, IntakeConstants.kPullInPower);

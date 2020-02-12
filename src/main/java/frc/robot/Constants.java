@@ -8,6 +8,7 @@
 package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.InvertType;
+import com.revrobotics.CANSparkMax.IdleMode;
 
 import edu.wpi.first.wpilibj.kinematics.DifferentialDriveKinematics;
 
@@ -98,4 +99,34 @@ public final class Constants {
         public static final double kPushOutPower = -0.5;  // Power to be applied for pushing out the PowerCell
     }
 
+    public static final class IndexerConstants {
+        public static final int kIndexerMotor_id = 31;
+        public static final InvertType kMotorInverted = InvertType.None;
+        public static final int[] kEncoderPorts = new int[]{6, 7};
+        public static final boolean kEncoderReversed = false;
+        public static final double kEncoderPulsesPerRev = 8192; // Rev Throughbore encoder
+        public static final double kIndexerGearRatio = 24.0; // Assuming Johnson Electric Motor
+        public static final double kPullInPower = 0.6;  // Power to be applied for pulling in the PowerCell in Indexer
+        public static final double kPushOutPower = -0.5;  // Power to be applied for pushing out the PowerCell in Indexer
+    }
+
+    public static final class LauncherConstants {
+        public static final int kLauncherMotorLeft_id = 41;
+        public static final int kLauncherMotorRight_id = 42;
+        public static final double kClosedLoopRampRate = 0.20;  // 200 milli seconds from 0 to full throttle
+        public static final IdleMode kIdleMode = IdleMode.kCoast;
+        public static final int kSparkMaxBuiltinCPR = 42;
+        public static final int kNeoEncoderPulsesPerRev = kSparkMaxBuiltinCPR * 4;
+        // public static final double kLauncherPower = 0.8;
+
+        // PID coefficients
+        public static final double  kP = 6e-5; 
+        public static final double  kI = 0;
+        public static final double  kD = 0; 
+        public static final double  kIz = 0; 
+        public static final double  kFF = 0.000015; 
+        public static final double  kMaxOutput = 1; 
+        public static final double  kMinOutput = -1;
+        public static final double  maxRPM = 5700;
+    }
 }

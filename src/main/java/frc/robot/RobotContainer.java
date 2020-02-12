@@ -31,6 +31,9 @@ import frc.robot.Constants.AutoConstants;
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.OIConstants;
 import frc.robot.commands.AutoDriveToTrench;
+import frc.robot.subsystems.Indexer;
+import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.Launcher;
 import frc.robot.subsystems.SparkMAX_DriveTrain;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RamseteCommand;
@@ -49,6 +52,9 @@ public class RobotContainer {
   // The driver's controller
   XboxController m_driverController = new XboxController(OIConstants.kDriverControllerPort);
 
+  private final Intake m_intake = new Intake();
+  private final Indexer m_indexer = new Indexer();
+  private final Launcher m_launcher = new Launcher();
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.
