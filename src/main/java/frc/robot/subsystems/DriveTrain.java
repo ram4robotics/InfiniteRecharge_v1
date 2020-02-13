@@ -25,7 +25,7 @@ import edu.wpi.first.wpilibj.geometry.Rotation2d;
 import edu.wpi.first.wpilibj.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.wpilibj.kinematics.DifferentialDriveWheelSpeeds;
 
-public class SparkMAX_DriveTrain extends SubsystemBase {
+public class DriveTrain extends SubsystemBase {
   CANSparkMax m_leftMaster, m_leftSlave, m_rightMaster, m_rightSlave;
   CANEncoder  neo_leftEncoder, neo_rightEncoder;
   private final Encoder m_leftEncoder;
@@ -45,7 +45,7 @@ public class SparkMAX_DriveTrain extends SubsystemBase {
   /**
    * Creates a new DriveTrain.
    */
-  public SparkMAX_DriveTrain() {
+  public DriveTrain() {
     m_leftMaster = new CANSparkMax(DriveConstants.kLeftMotor1_id, MotorType.kBrushless);
     m_leftMaster.setInverted(false);
     m_leftMaster.setIdleMode(IdleMode.kBrake);

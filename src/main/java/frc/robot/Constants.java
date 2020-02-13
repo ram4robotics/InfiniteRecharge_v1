@@ -85,6 +85,13 @@ public final class Constants {
         public static final double kRamseteZeta = 0.7;
     }
 
+    public static final class AutoPathsConstants {
+        public static final int kPos3Path1_numSegments = 4;
+        public static final String[] kPos3Path1 = 
+            new String[] {"paths/Auto_pos3_path1_segment1.wpilib.json", "paths/Auto_pos3_path1_segment2.wpilib.json",
+                "paths/Auto_pos3_path1_segment3.wpilib.json", "paths/Auto_pos3_path1_segment4.wpilib.json"};
+    }
+
     public static final class IntakeConstants {
         public static final int kIntakeMotor_id = 21;
         public static final InvertType kMotorInverted = InvertType.None;

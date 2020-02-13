@@ -8,13 +8,17 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.Launcher;
 
 public class LaunchPowerCells extends CommandBase {
+  private Launcher m_launcher;
   /**
    * Creates a new LaunchPowerCells.
    */
-  public LaunchPowerCells() {
+  public LaunchPowerCells(Launcher launcher) {
+    m_launcher = launcher;
     // Use addRequirements() here to declare subsystem dependencies.
+    addRequirements(launcher);
   }
 
   // Called when the command is initially scheduled.
@@ -25,6 +29,7 @@ public class LaunchPowerCells extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
+    m_launcher.launch(0.9);
   }
 
   // Called once the command ends or is interrupted.

@@ -10,17 +10,17 @@ package frc.robot.commands;
 import java.util.function.DoubleSupplier;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.subsystems.SparkMAX_DriveTrain;
+import frc.robot.subsystems.DriveTrain;
 
 public class DefaultTeleopDrive extends CommandBase {
-  private final SparkMAX_DriveTrain m_driveTrain;
+  private final DriveTrain m_driveTrain;
   private final DoubleSupplier m_forward;
   private final DoubleSupplier m_rotation;
 
   /**
    * Creates a new DefaultTeleopDrive.
    */
-  public DefaultTeleopDrive(SparkMAX_DriveTrain driveTrain, 
+  public DefaultTeleopDrive(DriveTrain driveTrain, 
     DoubleSupplier forward, DoubleSupplier rotation) {
     // Use addRequirements() here to declare subsystem dependencies.
     m_driveTrain = driveTrain;
